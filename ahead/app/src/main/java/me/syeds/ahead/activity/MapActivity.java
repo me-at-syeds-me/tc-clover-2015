@@ -1,20 +1,11 @@
 package me.syeds.ahead.activity;
 
-import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.location.Location;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 
-import me.syeds.ahead.R;
-import me.syeds.ahead.util.FakeBuyer;
-import me.syeds.ahead.util.FakeOrderStorage;
-import me.syeds.ahead.util.InterviewServerTask;
-import me.syeds.ahead.util.LocationGenerator;
-import me.syeds.ahead.util.NotificationListener;
-import me.syeds.ahead.util.NotificationReceiver;
-import me.syeds.ahead.util.Order;
-import me.syeds.ahead.util.TrackListener;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -30,6 +21,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
+
+import me.syeds.ahead.R;
+import me.syeds.ahead.util.FakeBuyer;
+import me.syeds.ahead.util.FakeOrderStorage;
+import me.syeds.ahead.util.InterviewServerTask;
+import me.syeds.ahead.util.LocationGenerator;
+import me.syeds.ahead.util.NotificationListener;
+import me.syeds.ahead.util.NotificationReceiver;
+import me.syeds.ahead.util.Order;
+import me.syeds.ahead.util.TrackListener;
 
 /**
  * Created by syedhaider on 9/20/15.
