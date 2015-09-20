@@ -8,24 +8,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import me.syeds.ahead.R;
 import me.syeds.ahead.util.FakeBuyer;
 import me.syeds.ahead.util.Order;
 import me.syeds.ahead.util.TrackListener;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 /**
  * Created by syedhaider on 9/20/15.
  */
 
 
 public class OrderActivity extends Fragment implements TrackListener{
-    
+    Button button;
+
     public static final String EXTRA_ORDER = OrderActivity.class.getName() + ".ORDER";
     
     private FakeBuyer buyer;
-    
+
     private TextView numberTxtView;
     private TextView desctiptionTxtView;
     private TextView arrivalTimeTxtView;
@@ -41,9 +49,30 @@ public class OrderActivity extends Fragment implements TrackListener{
         arrivalTimeTxtView = (TextView)rootView.findViewById(R.id.txt_arrival_time);
         distanceTxtView = (TextView)rootView.findViewById(R.id.txt_distance);
         imageView = (ImageView)rootView.findViewById(R.id.order_image);
+        addListenerOnButton();
+
         return rootView;
     }
-    
+
+    public void addListenerOnButton() {
+
+        final Context context = this;
+
+        button = (Button) findViewById(R.id.button1);
+
+        button.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, App2Activity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+    }
     @Override
     public void onResume() {
         super.onResume();
