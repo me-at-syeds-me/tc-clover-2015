@@ -19,6 +19,11 @@
 		CC00863B1BAE754E0074A71F /* meal3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC0086371BAE754E0074A71F /* meal3.jpg */; settings = {ASSET_TAGS = (); }; };
 		CC00863C1BAE754E0074A71F /* steak_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC0086381BAE754E0074A71F /* steak_sandwich.jpg */; settings = {ASSET_TAGS = (); }; };
 		CC00863E1BAE76700074A71F /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC00863D1BAE76700074A71F /* MealTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CC56B50D1BAEC07800E7863B /* 512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56B50B1BAEC07800E7863B /* 512x512.png */; settings = {ASSET_TAGS = (); }; };
+		CC56B5111BAEC12500E7863B /* 29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56B5101BAEC12500E7863B /* 29x29.png */; settings = {ASSET_TAGS = (); }; };
+		CC56B5131BAEC35600E7863B /* Icon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56B5121BAEC35600E7863B /* Icon58x58.png */; settings = {ASSET_TAGS = (); }; };
+		CC56B5151BAEC3CA00E7863B /* Icon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56B5141BAEC3CA00E7863B /* Icon80x80.png */; settings = {ASSET_TAGS = (); }; };
+		CC56B5171BAEC40200E7863B /* Icon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56B5161BAEC40200E7863B /* Icon120x120.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		CC0086371BAE754E0074A71F /* meal3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meal3.jpg; sourceTree = "<group>"; };
 		CC0086381BAE754E0074A71F /* steak_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steak_sandwich.jpg; sourceTree = "<group>"; };
 		CC00863D1BAE76700074A71F /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		CC56B50B1BAEC07800E7863B /* 512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512x512.png; sourceTree = "<group>"; };
+		CC56B5101BAEC12500E7863B /* 29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x29.png; sourceTree = "<group>"; };
+		CC56B5121BAEC35600E7863B /* Icon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon58x58.png; sourceTree = "<group>"; };
+		CC56B5141BAEC3CA00E7863B /* Icon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon80x80.png; sourceTree = "<group>"; };
+		CC56B5161BAEC40200E7863B /* Icon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120x120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,11 @@
 				CC00863D1BAE76700074A71F /* MealTableViewController.swift */,
 				CC0086331BAE74AA0074A71F /* MealTableViewCell.swift */,
 				CC0086261BAE73C60074A71F /* Assets.xcassets */,
+				CC56B5161BAEC40200E7863B /* Icon120x120.png */,
+				CC56B5141BAEC3CA00E7863B /* Icon80x80.png */,
+				CC56B5121BAEC35600E7863B /* Icon58x58.png */,
+				CC56B5101BAEC12500E7863B /* 29x29.png */,
+				CC56B50B1BAEC07800E7863B /* 512x512.png */,
 				CC0086351BAE754D0074A71F /* meal1.jpg */,
 				CC0086361BAE754D0074A71F /* meal2.png */,
 				CC0086371BAE754E0074A71F /* meal3.jpg */,
@@ -142,11 +157,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC56B5111BAEC12500E7863B /* 29x29.png in Resources */,
 				CC00863B1BAE754E0074A71F /* meal3.jpg in Resources */,
 				CC0086391BAE754E0074A71F /* meal1.jpg in Resources */,
+				CC56B5131BAEC35600E7863B /* Icon58x58.png in Resources */,
+				CC56B5151BAEC3CA00E7863B /* Icon80x80.png in Resources */,
+				CC56B5171BAEC40200E7863B /* Icon120x120.png in Resources */,
 				CC00862A1BAE73C60074A71F /* LaunchScreen.storyboard in Resources */,
 				CC0086271BAE73C60074A71F /* Assets.xcassets in Resources */,
 				CC0086251BAE73C60074A71F /* Main.storyboard in Resources */,
+				CC56B50D1BAEC07800E7863B /* 512x512.png in Resources */,
 				CC00863A1BAE754E0074A71F /* meal2.png in Resources */,
 				CC00863C1BAE754E0074A71F /* steak_sandwich.jpg in Resources */,
 			);
