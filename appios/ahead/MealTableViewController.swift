@@ -14,6 +14,43 @@ class MealTableViewController: UITableViewController {
     
     var meals = [Meal]()
     
+    @IBAction func postToServer(sender: AnyObject) {
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! MealTableViewCell
+        
+        let indexPath = tableView.indexPathForCell(cell)
+        let item = indexPath?.item;
+        postToServerFunction(item)
+
+    }
+    func postToServerFunction(item: Int?) {
+        print("Button Pressed")
+        let url: NSURL = NSURL(string: "http://localhost:8888/ahead/order.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var bodyData = "order=1020"
+        if item == 0 {
+            bodyData = "{\"event\": \"0\", \"data\": { \"order\": \"1010\", \"address\": \"699 Connecticut St, San Francisco, CA 94107\"}}"
+        }
+        if item == 1 {
+            bodyData = "event=0&order=1010&address="
+        }
+        if item == 2 {
+            bodyData = "order=1030"
+        }
+        
+        request.HTTPMethod = "POST"
+        
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                print(response)
+                
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
