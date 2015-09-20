@@ -42,6 +42,9 @@
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="265" y="51" width="116" height="30"/>
                                             </variation>
+                                            <connections>
+                                                <action selector="postToNotify:" destination="v9U-ec-cAz" eventType="touchUpInside" id="s9d-iE-w4R"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steak Sandwich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIK-Pf-qsU">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -88,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="16" height="16"/>
+        <image name="defaultPhoto" width="1500" height="1500"/>
     </resources>
 </document>
