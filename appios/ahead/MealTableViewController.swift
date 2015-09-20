@@ -26,7 +26,7 @@ class MealTableViewController: UITableViewController {
     }
     func postToServerFunction(item: Int?) {
         print("Button Pressed")
-        let url: NSURL = NSURL(string: "http://super.bestpayapp.com/ahead/order.php")!
+        let url: NSURL = NSURL(string: "http://ahead.appswireless.com/order.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var bodyData = "event=0&order=1010&address=1233 17th Street, San Francisco, CA 94107"
         if item == 0 {
@@ -64,7 +64,7 @@ class MealTableViewController: UITableViewController {
     
     func postToNotifyFunction(item: Int?) {
         
-        var url: NSURL = NSURL(string: "http://localhost:8888/ahead/headingout.php")!
+        var url: NSURL = NSURL(string: "http://ahead.appswireless.com/order.php")!
         var request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var bodyData = "event=1&order=1010&address=1233 17th Street, San Francisco, CA 94107"
         if item == 0 {
