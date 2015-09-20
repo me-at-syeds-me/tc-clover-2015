@@ -2,6 +2,7 @@ package me.syeds.ahead.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,13 @@ public class OrderActivity extends Fragment implements TrackListener{
         arrivalTimeTxtView = (TextView)rootView.findViewById(R.id.txt_arrival_time);
         distanceTxtView = (TextView)rootView.findViewById(R.id.txt_distance);
         imageView = (ImageView)rootView.findViewById(R.id.order_image);
+        rootView.findViewById(R.id.button_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                fm.popBackStack();
+            }
+        });
         return rootView;
     }
 

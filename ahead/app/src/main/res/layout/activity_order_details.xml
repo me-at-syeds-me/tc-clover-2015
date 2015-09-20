@@ -4,7 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:padding="10dp">
+   >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#878787">
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/back_wight"
+            android:textColor="#FFFFFF"
+            android:text="Map" />
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/txt_number"
@@ -13,7 +29,7 @@
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_order_desctiption"
@@ -21,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txt_arrival_time"
@@ -29,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txt_distance"
@@ -37,14 +53,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/order_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitCenter"
-        />
+        android:scaleType="fitCenter" />
 
 
 </LinearLayout>
