@@ -20,14 +20,17 @@ class Meal {
     // MARK: Initialization
     
     init?(name: String, photo: UIImage?, orderbtn: UIButton, notifybtn: UIButton) {
+        // Initialize stored properties.
+        self.name = name
+        self.photo = photo
+        self.orderbtn = orderbtn
+        self.notifybtn = notifybtn
+        if name.isEmpty  {
+            return nil
+        }
     }
     
-    // Initialize stored properties.
-    self.name = name
-    self.photo = photo
-    var orderbtn: UIButton
-    var notifybtn: UIButton
-    
+  
     
 }
 
