@@ -13,6 +13,8 @@ class MealTableViewController: UITableViewController {
     // MARK: Properties
     
     var meals = [Meal]()
+    let alert = UIAlertView()
+
     
     @IBAction func postToServer(sender: AnyObject) {
         let button = sender as! UIButton
@@ -23,6 +25,11 @@ class MealTableViewController: UITableViewController {
         let item = indexPath?.item;
         postToServerFunction(item)
 
+        alert.title = "Success"
+        alert.message = "Order placed successfully!"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+        
     }
     func postToServerFunction(item: Int?) {
         print("Button Pressed")
@@ -59,6 +66,11 @@ class MealTableViewController: UITableViewController {
         let item = indexPath?.item;
         
         postToNotifyFunction(item)
+        
+        alert.title = "Success"
+        alert.message = "Restaurant is notified about your location!"
+        alert.addButtonWithTitle("OK")
+        alert.show()
 
     }
     

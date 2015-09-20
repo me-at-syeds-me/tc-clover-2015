@@ -70,7 +70,7 @@ public class NotificationReceiver extends AppNotificationReceiver {
             if (json.has(ORDER_NUMBER)) {
                 orderNumber = json.getInt(ORDER_NUMBER);
             } else {
-                showError("Notification don;t have order number");
+                showError("Notification don't have order number");
                 return null;
             }
 
