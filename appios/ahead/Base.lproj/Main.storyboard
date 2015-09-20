@@ -53,6 +53,9 @@
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="210" y="43" width="116" height="30"/>
                                             </variation>
+                                            <connections>
+                                                <action selector="postToServerNotify:" destination="yAf-5S-TV0" eventType="touchUpInside" id="0qS-3x-RT8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <variation key="default">

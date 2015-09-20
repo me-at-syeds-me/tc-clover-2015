@@ -26,17 +26,17 @@ class MealTableViewController: UITableViewController {
     }
     func postToServerFunction(item: Int?) {
         print("Button Pressed")
-        let url: NSURL = NSURL(string: "http://localhost:8888/ahead/order.php")!
+        let url: NSURL = NSURL(string: "http://super.bestpayapp.com/ahead/order.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
-        var bodyData = "order=1020"
+        var bodyData = "event=0&order=1010&address=1233 17th Street, San Francisco, CA 94107"
         if item == 0 {
-            bodyData = "{\"event\": \"0\", \"data\": { \"order\": \"1010\", \"address\": \"699 Connecticut St, San Francisco, CA 94107\"}}"
+            bodyData = "event=0&order=1010&address=1233 17th Street, San Francisco, CA 94107"
         }
         if item == 1 {
-            bodyData = "event=0&order=1010&address="
+            bodyData = "event=0&order=1020&address=1233 17th Street, San Francisco, CA 94107"
         }
         if item == 2 {
-            bodyData = "order=1030"
+            bodyData = "event=0&order=1030&address=1233 17th Street, San Francisco, CA 94107"
         }
         
         request.HTTPMethod = "POST"
@@ -50,6 +50,43 @@ class MealTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func postToServerNotify(sender: AnyObject) {
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! MealTableViewCell
+        
+        let indexPath = tableView.indexPathForCell(cell)
+        let item = indexPath?.item;
+        
+        postToNotifyFunction(item)
+
+    }
+    
+    func postToNotifyFunction(item: Int?) {
+        
+        var url: NSURL = NSURL(string: "http://localhost:8888/ahead/headingout.php")!
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var bodyData = "event=1&order=1010&address=1233 17th Street, San Francisco, CA 94107"
+        if item == 0 {
+            bodyData = "event=1&order=1010&address=1233 17th Street, San Francisco, CA 94107"
+        }
+        if item == 1 {
+            bodyData = "event=1&order=1020&address=1233 17th Street, San Francisco, CA 94107"
+        }
+        if item == 2 {
+            bodyData = "event=1&order=1030&address=1233 17th Street, San Francisco, CA 94107"
+        }
+        request.HTTPMethod = "POST"
+        
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                print(response)
+                
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
